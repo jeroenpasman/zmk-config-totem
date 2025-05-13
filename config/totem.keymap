@@ -38,7 +38,7 @@
 /* left-hand HRMs */
 ZMK_BEHAVIOR(hml, hold_tap,
     flavor = "balanced";
-    tapping-term-ms = <280>;
+    tapping-term-ms = <250>;
     quick-tap-ms = <175>;                // repeat on tap-into-hold
     require-prior-idle-ms = <150>;
     bindings = <&kp>, <&kp>;
@@ -49,7 +49,7 @@ ZMK_BEHAVIOR(hml, hold_tap,
 /* right-hand HRMs */
 ZMK_BEHAVIOR(hmr, hold_tap,
     flavor = "balanced";
-    tapping-term-ms = <280>;
+    tapping-term-ms = <250>;
     quick-tap-ms = <175>;                // repeat on tap-into-hold
     require-prior-idle-ms = <150>;
     bindings = <&kp>, <&kp>;
@@ -122,21 +122,21 @@ label= "COLEMAKDH"                         ;
 label= "NUM"                              ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃           ┃   HOME    ┃     UP    ┃    END    ┃     {     ┃   ┃     /     ┃     7     ┃     8     ┃     9     ┃     -     ┃
+//             ┃    ESC    ┃   HOME    ┃     UP    ┃    END    ┃     {     ┃   ┃     /     ┃     7     ┃     8     ┃     9     ┃     -     ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
 //             ┃   SHIFT   ┃   LEFT    ┃    DOWN   ┃   RIGHT   ┃     [     ┃   ┃     *     ┃     4     ┃     5     ┃     6     ┃     +     ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃           ┃           ┃   P UP    ┃  C LOCK   ┃  P DOWN   ┃     (     ┃   ┃     =     ┃     1     ┃     2     ┃     3     ┃           ┃    RET    ┃
+// ┃           ┃     DEL   ┃   P UP    ┃  C LOCK   ┃  P DOWN   ┃     (     ┃   ┃     =     ┃     1     ┃     2     ┃     3     ┃           ┃    RET    ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-//                                     ┃           ┃    TAB    ┃    SPC    ┃   ┃     0     ┃    BSPC   ┃     ,     ┃
+//                                     ┃    NUM    ┃    TAB    ┃    SPC    ┃   ┃     0     ┃    BSPC   ┃     ,     ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &kp ESC     &kp HOME    &kp UP      &kp END     &kp LBRC        &kp FSLH    &kp KP_N7   &kp KP_N8   &kp KP_N9   &kp KP_MINUS
-                &kp LSHFT   &kp LEFT    &kp DOWN    &kp RIGHT   &kp LBKT        &kp ASTRK   &kp KP_N4   &kp KP_N5   &kp KP_N6   &kp KP_PLUS
-    &trans      &kp DEL     &kp PG_UP   &kp CAPS    &kp PG_DN   &kp LPAR        &kp EQUAL   &kp KP_N1   &kp KP_N2   &kp KP_N3   &trans         &kp RET      
-                                        &trans      &trans      &trans          &kp KP_N0   &kp BSPC    &kp COMMA      
+                &kp ESC     &kp HOME    &kp UP        &kp END     &kp LBRC        &kp FSLH    &kp KP_N7   &kp KP_N8   &kp KP_N9   &kp KP_MINUS
+                &kp LSHFT   &kp LEFT    &kp DOWN      &kp RIGHT   &kp LBKT        &kp ASTRK   &kp KP_N4   &kp KP_N5   &kp KP_N6   &kp KP_PLUS
+    &trans      &kp DEL     &kp PG_UP   &kp CAPS      &kp PG_DN   &kp LPAR        &kp EQUAL   &kp KP_N1   &kp KP_N2   &kp KP_N3   &trans         &kp RET      
+                                        &KP_NUMLOCK   &trans      &trans          &kp KP_N0   &kp BSPC    &kp COMMA      
                         >;
                 };
 
